@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <html lang="en-US">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tether.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="css/app.css">
+
+  <script src="https://use.fontawesome.com/ee9669f305.js"></script>
+
+  <title>Goals</title>
+
+</head>
+<body>
+
+	<nav class="navbar fixed-top navbar-light bg-success">
+		<ul class="nav justify-content-between">
+			<li class="nav-item">
+				<a class="nav-link pl-0" href="landing.html">Back</a>
+			</li>
+			<li class="nav-item display-3">
+				Goals
+			</li>
+			<li class="nav-item">
+				<a class="nav-link pr-0" href="#"><i class="fa fa-globe"></i></a>
+			</li>
+		</ul>
+	</nav>
+	
+  <div class="container-bd">
+
+  	
+<h1 class="display-1">What are your hopes and dreams for your child?</h1>
+
+<div class="card mt-3 mb-3">
+	<div class="card-block">
+		<div class="dropdown">
+			<label class="" for="inlineFormInput"></label>
+			<input id ="dLabel" type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="">
+			<div class="dropdown-menu empty">
+				<ul>
+					<li>
+						Are there any academic goals you'd like them to achieve?
+					</li>
+					<li>
+						Where do you want to see your child in 10 years?
+					</li>
+					<li>
+						What kind of person do you hope your child can become?
+					</li>
+				</ul>
+			</div>
+			<div class="dropdown-menu filled">
+					<button class="dropdown-item">I want them to go to college</button>
+					<button class="dropdown-item">I hope they can make friends</button>
+					<button class="dropdown-item">I hope they can retain our native language</button>
+					<button class="dropdown-item">I want them to be healthy</button>
+					<button class="dropdown-item">I want them to have a secure job</button>
+			</div>
+		</div>
+
+		<div class="d-flex justify-content-end mb-0 focus-only">
+			<button class="btn btn-secondary removecard">Remove</button>
+			<button class="btn btn-primary ml-2 savecard">Save</button>
+		</div>
+	</div>
+</div>
+
+<button class="btn btn-block btn-outline-primary mb-3 addemptycard" href="questions.html" role="button">Add</button>
+
+<a class="btn btn-block btn-primary" href="questions.html" role="button">Next</a>
+
+
+
+
+  </div>
+	
+	<button type="button" id="speakeasy" class="btn btn-warning rounded-circle">
+		<i class="fa fa-volume-up" aria-hidden="true"></i>
+	</button>
+
+	<script src="js/springboard.js"></script>
+
+</body>
+</html>

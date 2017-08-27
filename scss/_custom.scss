@@ -1,0 +1,304 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+// Colors
+//
+// Start with assigning color names to specific hex values.
+$red:    #d9534f !default;
+$orange: #f0ad4e !default;
+$yellow: #ffd500 !default;
+$green:  #5cb85c !default;
+$blue:   #0275d8 !default;
+$teal:   #5bc0de !default;
+$pink:   #ff5b77 !default;
+$purple: #613d7c !default;
+
+// Create grayscale
+$gray-dark:                 #444 !default;
+$gray:                      #666;
+$gray-light:                #969696 !default;
+$gray-lighter:              #eceeef !default;
+$gray-lightest:             #f7f7f9 !default;
+
+// use brand-primary for 'focus'
+$brand-primary:             #00a6f8;
+
+// use brand-success for 'good'
+$brand-success:             $teal;
+$brand-info:                #abc123;
+
+//use brand-warning for 'important'
+$brand-warning:            #e69e00; //#fea531;
+
+// use brand-danger for 'bad'
+$brand-danger:              #EC5C45;
+$brand-inverse:             #104e8b;
+
+$text-muted: $gray-light;
+
+// Body
+$body-color:    $gray-dark;
+$inverse-bg:    $gray-dark !default;
+$inverse-color: $gray-lighter !default;
+
+.gloss {
+	color: #00a6f8;
+	font-weight: 700;
+	text-decoration: underline;
+}
+// Fonts
+$font-family-sans-serif: "Noto Sans", sans-serif;
+$font-family-serif:      "Noto Serif", serif;
+$font-family-monospace:  "Noto Mono", monospace;
+$font-family-base:       $font-family-sans-serif;
+
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-lg:   1.25rem !default;
+$font-size-sm:   .875rem !default;
+$font-size-xs:   .75rem !default;
+
+//Use display1 class for h1
+$display1-size: 1.25rem; //24px if rem=16px
+$display1-weight: 700;
+.display-1 {
+	color: #00a6f8 !important;
+	line-height: 1.25 !important;
+	// margin-bottom: 2rem;
+}
+
+//Use display2 class for h2
+$display2-size: 1.5rem; //30px if rem=16px
+
+
+//NAVIGATION
+//use display3 for navbar title
+$display3-size:	$font-size-lg;
+// $display3-weight: 700;
+.display-3 {
+	color: #fff;
+	padding: .5rem 1rem;
+}
+.nav-link {
+	color: #fff;
+	width: 20vw;
+}
+
+.nav-item:last-of-type {
+	text-align:right;
+}
+
+$headings-color: $gray-dark;
+$headings-font-weight:   400;
+
+//Availability grid//
+$table-border-color: #fff;
+$table-border-width: 2px;
+$table-bg:                      $gray-lightest;
+$table-head-bg:                 $gray-lighter !important;
+
+.table-bordered td{
+	font-size: $font-size-xs;
+	text-align: center;
+	// color: $text-muted !important;
+}
+
+.table-bordered td span {
+	font-size: $font-size-base;
+	display: block;
+}
+
+.table-bordered th {
+	text-align: center;
+}
+
+.available,
+.available-on-appointment {
+	background-color: $brand-primary;
+	color: #fff !important;
+}
+
+.available .hour,
+.available-on-appointment .hour {
+
+	font-weight: 700;
+}
+
+.available-on-appointment {
+	background-color:      lighten($brand-primary, 10%);
+	color: #fff !important;
+	background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.15) 25%,
+	transparent 25%, transparent 50%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.15) 75%, transparent 75%, transparent);
+	    background-size: 1rem 1rem;
+}
+
+
+//speak button
+#speakeasy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3rem;
+	width: 3rem;
+	position: fixed;
+	bottom: 1rem;
+	left: 1rem;
+	z-index: 2000; //to float button on top of cards
+}
+
+#speakeasy.active {
+	background-color: #fff;
+	border-color: $brand-warning;
+	color: $brand-warning;
+}
+
+.spoken {
+	text-decoration: underline !important;
+	text-decoration-color: $brand-warning !important;
+}
+
+// card UI
+
+.card .focus-only {
+	display: none !important;
+}
+
+.card-active .focus-only {
+	display: flex !important;
+}
+
+.phone-options {
+	display: none !important;
+}
+
+.is-phonenumber + .phone-options {
+	display: flex !important;
+}
+
+// prompts and suggestions
+
+.dropdown-menu.empty,
+.dropdown-menu.filled {
+	width: 100%;
+}
+
+// forms
+
+label {
+	margin-top: 1rem !important;
+	margin-bottom: 0 !important;
+}
+
+label + small {
+	margin-top: 0 !important;
+}
+
+// availability
+
+.contact-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+//invite button
+// #invitation {
+// 	position: fixed;
+// 	bottom: 1rem;
+// 	left: 1rem;
+// 	z-index: 2000; //to float button on top of cards
+// }
+
+//days of the week grid
+.btn-group-week label {
+	// flex-basis: 25% !important;
+	margin-bottom: -1px;
+}
+
+.btn-group-week {
+	display: grid !important;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+#example-time-input {
+	font-size: $font-size-xs;
+}
+
+//custom corners
+.top-left-4 {
+	border-radius: 4px 0 0 0 !important;
+}
+
+.top-right-4 {
+	border-radius: 0 4px 0 0 !important;
+}
+
+.bottom-right-4 {
+	border-radius: 0 0 4px 0 !important;
+}
+
+.bottom-left-4 {
+	border-radius: 0 0 0 4px !important;
+}
+
+//fixes anchors to top of the overview page
+.btn-group-anchors {
+	// margin-top: 4.5rem;
+}
+
+
+//cards
+.card {
+	box-shadow: rgba(0,0,0,.125) 1px 2px 8px 1px;
+}
+
+.card-active {
+	box-shadow: rgba(0,0,0,.25) 1px 2px 16px 1px;
+	border-color: #ccc !important;
+
+}
+
+input {
+	border-radius: 0 !important;
+}
+
+//Availability legend
+
+.legend {
+	display: flex;
+}
+
+.legend-square {
+	width: 1.5rem;
+	height: 1.5rem;
+	display: inline-block;
+	margin-right: 0.5rem;
+}
+.legend-label {
+	display: inline-block;
+	padding-bottom: 1rem;
+	margin-right: 2rem;
+}
+
+//Glossary words
+.term {
+	color: $orange;
+	font-weight: 700;
+}
+
+//Spacing
+
+//16px margin
+.container-bd {
+	margin-bottom: 3.5rem; //leave room for speak bunny
+	margin-left: 1rem;
+	margin-right: 1rem;
+	margin-top: 4.5rem;
+}
+
+//changes to Noto sans from browser default sans-serif for forms
+button, input, optgroup, select, textarea {
+    font-family: inherit !important;
+
+}
